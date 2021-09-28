@@ -3,9 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import "normalize.css";
 import App from "./App";
+import { GlobalProvider } from "./context/GlobalContext";
 
 ReactDOM.render(
-  <App />,
-
+  <GlobalProvider>
+    <App />
+  </GlobalProvider>,
   document.getElementById("root")
 );
