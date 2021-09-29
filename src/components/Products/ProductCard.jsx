@@ -1,6 +1,8 @@
 import React from "react";
 
-const ProductCard = ({ product: { title, price, img, hoverImg } }) => {
+import { Link, useRouteMatch } from "react-router-dom";
+
+const ProductCard = ({ product: { id, title, price, img, hoverImg } }) => {
   const changeImg = (e) => {
     const img = e.currentTarget.querySelector(".img");
     const hoverImg = e.currentTarget.querySelector(".hover-img");
@@ -17,21 +19,30 @@ const ProductCard = ({ product: { title, price, img, hoverImg } }) => {
     img.style.display = "block";
     hoverImg.style.display = "none";
   };
+
+  const { path } = useRouteMatch();
+
   return (
     <div className="products__wrapper__product--card">
-      {/* image  */}
-      <div
-        className="product--card__img"
-        onMouseOver={changeImg}
-        onMouseOut={changeImgBack}
-      >
-        <img src={img} alt={title} className="img" />
+      {/*-----------
+       Router Link 
+       ------------*/}
+      <Link to={`${path}${title}`}>
+        <div
+          className="product--card__img"
+          onMouseOver={changeImg}
+          onMouseOut={changeImgBack}
+        >
+          <img src={img} alt={title} className="img" />
 
-        <img src={hoverImg} alt={title} className="hover-img" />
-      </div>
+          <img src={hoverImg} alt={title} className="hover-img" />
+        </div>
+      </Link>
+      {/*-----------
+       Router Link 
+       ------------*/}
 
       {/* Details */}
-
       <div className="product--card__details">
         <h3 className="title">{title}</h3>
         <h4 className="price">${price}</h4>
