@@ -36,6 +36,15 @@ code {
     monospace;
 }
 
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.97);
+  transition: 250ms ease-in-out;
+}
+
 /*--------------------
  ---- HELPERS 
  ----------------*/
@@ -43,4 +52,15 @@ code {
   width: 92%;
   max-width: 120em;
   margin-inline: auto;
+}
+
+.btn {
+  font-size: 1.4rem;
+  padding: 1em 1.5em;
+  background: #111;
+  color: white;
+}
+
+.btn:hover {
+  background: #353535;
 }

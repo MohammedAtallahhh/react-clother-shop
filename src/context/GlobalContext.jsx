@@ -8,6 +8,7 @@ const GlobalDispatch = createContext();
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(GlobalReducer, {
     products: products,
+    cart: [],
   });
   return (
     <GlobalContext.Provider value={state}>

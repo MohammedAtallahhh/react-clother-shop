@@ -2,9 +2,13 @@ import React from "react";
 
 import { Link, useRouteMatch } from "react-router-dom";
 import { formatPrice } from "../../Helper";
-import Button from "../Button/Button";
+import AddToCart from "../AddToCart/AddToCart";
 
-const ProductCard = ({ product: { id, title, price, img, hoverImg } }) => {
+const ProductCard = ({ product }) => {
+  // Destructure needed properties of the product
+  let { title, price, img, hoverImg } = product;
+
+  // Change Image on Hover
   const changeImg = (e) => {
     const img = e.currentTarget.querySelector(".img");
     const hoverImg = e.currentTarget.querySelector(".hover-img");
@@ -14,6 +18,7 @@ const ProductCard = ({ product: { id, title, price, img, hoverImg } }) => {
     hoverImg.style.display = "block";
   };
 
+  // Change the image back when the mouse leave
   const changeImgBack = (e) => {
     const img = e.currentTarget.querySelector(".img");
     const hoverImg = e.currentTarget.querySelector(".hover-img");
@@ -55,7 +60,9 @@ const ProductCard = ({ product: { id, title, price, img, hoverImg } }) => {
         <h4 className="price">{price}</h4>
       </div>
 
-      <Button className="product--card__btn">ADD to cart</Button>
+      <AddToCart product={product} className="product--card__btn">
+        ADD to cart
+      </AddToCart>
     </div>
   );
 };
