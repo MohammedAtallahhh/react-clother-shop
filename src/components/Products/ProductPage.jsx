@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 // import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../context/GlobalContext";
 import { formatPrice } from "../../Helper";
-import Button from "../Button/Button";
+import AddToCart from "../AddToCart/AddToCart";
 import "./ProductPage.css";
 
 const ProductPage = () => {
@@ -19,6 +19,7 @@ const ProductPage = () => {
 
   let { title, info, price, img } = product;
 
+  console.log("Reached");
   price = formatPrice(price);
 
   return (
@@ -43,7 +44,7 @@ const ProductPage = () => {
         </div>
 
         <footer className="product__footer">
-          <Button className="product__footer--btn">ADD to cart</Button>
+          <AddToCart className="product__footer--btn">ADD to cart</AddToCart>
         </footer>
       </div>
     </div>
