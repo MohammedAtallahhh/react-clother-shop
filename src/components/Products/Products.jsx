@@ -28,6 +28,10 @@ const Products = () => {
             </div>
           </Route>
 
+          <Route path={`${path}cart`}>
+            <h1>Cart</h1>
+          </Route>
+
           <Route path={`${path}:productTitle`}>
             <ProductPage />
           </Route>

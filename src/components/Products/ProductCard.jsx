@@ -1,6 +1,8 @@
 import React from "react";
 
 import { Link, useRouteMatch } from "react-router-dom";
+import { formatPrice } from "../../Helper";
+import Button from "../Button/Button";
 
 const ProductCard = ({ product: { id, title, price, img, hoverImg } }) => {
   const changeImg = (e) => {
@@ -22,12 +24,17 @@ const ProductCard = ({ product: { id, title, price, img, hoverImg } }) => {
 
   const { path } = useRouteMatch();
 
+  // Make the title better as a link
+  let formattedTitle = title.replace(" ", "-").toLowerCase();
+
+  // Format price
+  price = formatPrice(price);
   return (
     <div className="products__wrapper__product--card">
       {/*-----------
        Router Link 
        ------------*/}
-      <Link to={`${path}${title}`}>
+      <Link to={`${path}${formattedTitle}`}>
         <div
           className="product--card__img"
           onMouseOver={changeImg}
@@ -45,10 +52,10 @@ const ProductCard = ({ product: { id, title, price, img, hoverImg } }) => {
       {/* Details */}
       <div className="product--card__details">
         <h3 className="title">{title}</h3>
-        <h4 className="price">${price}</h4>
+        <h4 className="price">{price}</h4>
       </div>
 
-      <button className="btn product--card__btn">ADD to cart</button>
+      <Button className="product--card__btn">ADD to cart</Button>
     </div>
   );
 };
