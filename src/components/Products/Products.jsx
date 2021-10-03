@@ -27,6 +27,7 @@ const Products = () => {
               ))}
             </div>
           </Route>
+
           <Route path={`${path}:productTitle`}>
             <ProductPage />
           </Route>

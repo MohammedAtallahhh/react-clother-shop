@@ -1,0 +1,103 @@
+.cart {
+  padding: 5rem 0 10rem;
+}
+
+.cart > .container {
+  display: grid;
+  gap: 30px;
+}
+
+.cart__item {
+  max-width: 700px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.1);
+}
+
+/*--------------
+  IMAGE
+ ---------*/
+.cart__item--img img {
+  max-width: 100%;
+  display: block;
+}
+
+/*---------
+  Right Side 
+ ------------*/
+.cart__item--info {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* HEADER  */
+.cart__item--info header h2 {
+  font-size: 2rem;
+  color: #222;
+}
+
+/* Body */
+.cart__item--body {
+  margin: 2rem 0 5rem;
+}
+
+.cart__item--body p {
+  font-size: 1.4rem;
+}
+
+/* AMOUNT */
+.cart__item--info .control-amount {
+  display: flex;
+}
+
+.control-amount .label {
+  position: absolute;
+  top: -2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #404040;
+}
+
+.control-amount button {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid #222;
+  cursor: pointer;
+}
+
+.control-amount .amount {
+  font-size: 3rem;
+  margin-inline: 1rem;
+}
+
+/* FOOTER  */
+.cart__item--footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-remove {
+  background: transparent;
+  color: rgb(255, 31, 31);
+  border: 1px solid;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.7em 1.3em;
+  border-radius: 0.2em;
+}
+
+@media (min-width: 450px) {
+  .cart__item {
+    flex-direction: row;
+  }
+
+  .cart__item--img img {
+    max-width: 260px;
+  }
+}

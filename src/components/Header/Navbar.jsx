@@ -6,7 +6,9 @@ import { useGlobalContext } from "../../context/GlobalContext";
 
 const Navbar = () => {
   const { cart } = useGlobalContext();
-  let amount = cart.reduce((acc, cur) => acc + cur.amount || 0, 0);
+
+  let amount = cart.reduce((acc, cur) => acc + (cur.amount || 0), 0);
+
   return (
     <nav className="header__nav">
       <div className="container">
@@ -20,7 +22,8 @@ const Navbar = () => {
           <li className="header__nav--list__item">
             <Link to="/cart" className="header__nav--list__link">
               <FiShoppingCart />
-              {cart.length ? (
+
+              {amount > 0 ? (
                 <span className="cart--badge">{amount}</span>
               ) : null}
             </Link>

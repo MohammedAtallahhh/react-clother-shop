@@ -5,7 +5,10 @@ import { formatPrice } from "../../Helper";
 import AddToCart from "../AddToCart/AddToCart";
 
 const ProductCard = ({ product }) => {
+  // Destructure needed properties of the product
   let { title, price, img, hoverImg } = product;
+
+  // Change Image on Hover
   const changeImg = (e) => {
     const img = e.currentTarget.querySelector(".img");
     const hoverImg = e.currentTarget.querySelector(".hover-img");
@@ -15,6 +18,7 @@ const ProductCard = ({ product }) => {
     hoverImg.style.display = "block";
   };
 
+  // Change the image back when the mouse leave
   const changeImgBack = (e) => {
     const img = e.currentTarget.querySelector(".img");
     const hoverImg = e.currentTarget.querySelector(".hover-img");

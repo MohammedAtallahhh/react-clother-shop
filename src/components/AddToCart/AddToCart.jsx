@@ -2,8 +2,9 @@ import React from "react";
 import { ADD_TO_CART } from "../../constants";
 import { useGlobalDispatch } from "../../context/GlobalContext";
 
-const Button = ({ className, product, ...props }) => {
+const AddToCart = ({ className, product, ...props }) => {
   const dispatch = useGlobalDispatch();
+
   return (
     <button
       className={`btn ${className}`}
@@ -15,4 +16,4 @@ const Button = ({ className, product, ...props }) => {
   );
 };
 
-export default Button;
+export default AddToCart;

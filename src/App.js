@@ -9,7 +9,10 @@ const App = () => {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/">
+          <Route path={`/cart`}>
+            <Cart />
+          </Route>
+          <Route path="/">
             <Products />
           </Route>
           <Route path="/cart">
