@@ -5,10 +5,12 @@ import { GlobalReducer } from "./GlobalReducer";
 const GlobalContext = createContext();
 const GlobalDispatch = createContext();
 
+localStorage.setItem("products", JSON.stringify(products));
+
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(GlobalReducer, {
-    products: products,
-    cart: [],
+    products: JSON.parse(localStorage.getItem("products")),
+    cart: JSON.parse(localStorage.getItem("cart")) || [],
   });
   return (
     <GlobalContext.Provider value={state}>

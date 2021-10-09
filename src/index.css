@@ -45,6 +45,10 @@ button:active {
   transition: 250ms ease-in-out;
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
+
 /*--------------------
  ---- HELPERS 
  ----------------*/

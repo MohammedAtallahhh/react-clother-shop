@@ -44,7 +44,9 @@ const ProductPage = () => {
         </div>
 
         <footer className="product__footer">
-          <AddToCart className="product__footer--btn">ADD to cart</AddToCart>
+          <AddToCart product={product} className="product__footer--btn">
+            ADD to cart
+          </AddToCart>
         </footer>
       </div>
     </div>

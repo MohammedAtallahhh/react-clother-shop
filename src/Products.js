@@ -14,7 +14,7 @@ import Shirt3Hover from "./images/shirt-3-hover.jpg";
 
 export const products = [
   {
-    id: Math.random(),
+    id: 1,
     amount: 0,
     title: "AWESOME Pants",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, id! Ullam nulla sunt cum architecto obcaecati doloribus asperiores expedita sapiente.",
@@ -23,7 +23,7 @@ export const products = [
     hoverImg: Pants1Hover,
   },
   {
-    id: Math.random(),
+    id: 2,
     amount: 0,
     title: "FANTASTIC Pants",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, id! Ullam nulla sunt cum architecto obcaecati doloribus asperiores expedita sapiente.",
@@ -32,7 +32,7 @@ export const products = [
     hoverImg: Pants2Hover,
   },
   {
-    id: Math.random(),
+    id: 3,
     amount: 0,
     title: "MAGNIFICIENT Pants",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, id! Ullam nulla sunt cum architecto obcaecati doloribus asperiores expedita sapiente.",
@@ -41,7 +41,7 @@ export const products = [
     hoverImg: Pants3Hover,
   },
   {
-    id: Math.random(),
+    id: 4,
     amount: 0,
     title: "MAGNIFICIENT Shirt",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, id! Ullam nulla sunt cum architecto obcaecati doloribus asperiores expedita sapiente.",
@@ -50,7 +50,7 @@ export const products = [
     hoverImg: Shirt1Hover,
   },
   {
-    id: Math.random(),
+    id: 5,
     amount: 0,
     title: "AMAZING Shirt",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, id! Ullam nulla sunt cum architecto obcaecati doloribus asperiores expedita sapiente.",
@@ -59,7 +59,7 @@ export const products = [
     hoverImg: Shirt2Hover,
   },
   {
-    id: Math.random(),
+    id: 6,
     amount: 0,
     title: "AWESOME Shirt",
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, id! Ullam nulla sunt cum architecto obcaecati doloribus asperiores expedita sapiente.",
